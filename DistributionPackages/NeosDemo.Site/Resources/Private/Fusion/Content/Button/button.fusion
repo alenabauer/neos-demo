@@ -1,0 +1,12 @@
+prototype(NeosDemo.Site:Content.Button) < prototype(Neos.Neos:ContentComponent) {
+    label = Neos.Neos:Editable {
+        property = 'label'
+    }
+    link = ${q(node).property('link')}
+    renderAsLink = ${site.context.inBackend ? false : true}
+
+    renderer = afx`
+        <a @if.render={props.renderAsLink} href={props.link} target="_blank" class="neos-demo-button">{props.label}</a>
+        <div @if.render={!props.renderAsLink} class="neos-demo-button">{props.label}</div>
+    `
+}

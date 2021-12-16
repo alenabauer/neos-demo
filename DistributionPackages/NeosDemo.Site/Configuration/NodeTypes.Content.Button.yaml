@@ -1,0 +1,24 @@
+
+'NeosDemo.Site:Content.Button':
+  superTypes:
+    'Neos.Neos:Content': true
+  ui:
+    label: Button
+    icon: link
+    position: 400
+    inlineEditable: true
+    inspector:
+      groups:
+        link:
+          label: 'Link'
+          icon: link
+  properties:
+    label:
+      options:
+        preset: 'text.plain'
+    link:
+      type: string
+      ui:
+        label: 'Link target'
+        inspector:
+          group: link
