@@ -6,6 +6,9 @@ prototype(NeosDemo.Site:Component.Header) < prototype(Neos.Fusion:Component) {
         startingPoint = ${site}
         maximumLevels = 2
     }
+    logoUrl = Neos.Fusion:ResourceUri {
+      path = 'resource://NeosDemo.Site/Public/Frontend/imgs/lw-logo.png'
+    }
 
     ##
     # If you want to use a default rendering for a menu, you can just use:
@@ -21,7 +24,7 @@ prototype(NeosDemo.Site:Component.Header) < prototype(Neos.Fusion:Component) {
 
     renderer = afx`
         <header class="main-header">
-            <a class="logo" href={props.homeLink}>BRAND NAME</a>
+            <a class="logo" href={props.homeLink}><img src={props.logoUrl} alt="logo" width="30"></img></a>
             <NeosDemo.Site:Component.Header.MenuItemsRenderer items={props.menuItems} />
         </header>
     `
