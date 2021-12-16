@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Petit+Formal+Script&display=swap');
+
 /**
  * This styles provide a very basic layout.
  * It's recommended to replace this with your own frontend tooling.
@@ -6,6 +8,11 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Courier Prime', monospace;
+}
+
+h1, h2 {
+  font-family: 'Petit Formal Script', cursive;
 }
 
 /**
@@ -13,9 +20,10 @@ body {
  */
 .main-header {
     padding: 1rem 1.2rem;
-    background: #00ADEE;
+    background: black;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -97,9 +105,14 @@ body {
  */
 .main-footer {
     padding: 1rem 1.2rem;
-    background: #00ADEE;
+    background: black;
+    color: white;
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100vw;
 }
 
 .main-footer > * {
